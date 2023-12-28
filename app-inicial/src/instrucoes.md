@@ -6,7 +6,7 @@
 - V [React] componente usando props
 - V [React] componente com eventos
 
-- X [React] componente com estado
+- V [React] componente com estado
 - X [React] comunicação entre componentes (direta)
 - X [React] comunicação entre componentes (indireta)
 - X [React] renderização condicional
