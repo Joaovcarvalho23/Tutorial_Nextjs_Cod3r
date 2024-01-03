@@ -1,6 +1,4 @@
 import Avo from "@/components/comunicacao/direta/Avo";
-import Filho from "@/components/comunicacao/direta/Filho";
-import Pai from "@/components/comunicacao/direta/Pai";
 
 export default function PaginaComunicacaoDireta () {
     return (
