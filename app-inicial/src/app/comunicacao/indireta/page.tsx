@@ -1,4 +1,3 @@
-import Avo from "@/components/comunicacao/direta/Avo";
 import Contador from "@/components/comunicacao/indireta/Contador";
 
 export default function PaginaComunicacaoIndireta () {
