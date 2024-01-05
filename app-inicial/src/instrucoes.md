@@ -7,7 +7,7 @@
 - V [React] componente com eventos
 
 - V [React] componente com estado
-- X [React] comunicação entre componentes (direta)
-- X [React] comunicação entre componentes (indireta)
+- V [React] comunicação entre componentes (direta)
+- V [React] comunicação entre componentes (indireta)
 - X [React] renderização condicional
 - X [React] renderização de listas
