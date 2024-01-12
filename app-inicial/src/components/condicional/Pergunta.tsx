@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import If from "./If"
+import { IconChevronDown, IconChevronUp } from "@tabler/icons-react"
 
 interface PerguntaProps {
     texto: string
@@ -17,11 +18,16 @@ export default function Pergunta(props: PerguntaProps){
             overflow-hidden
         `}>
             <div 
-                className="bg-zinc-700 p-5 cursor-pointer select-none"
+                className="bg-zinc-700 p-5 cursor-pointer select-none flex justify-between"
                 onClick={() => setAberta(!aberta)}
             >
-                {props.texto}
-                {props.alternativas}
+                <span>
+                    {props.texto}
+                    {props.alternativas}
+                </span>
+                {aberta? <IconChevronUp /> : <IconChevronDown />}
+                
+                
             </div>
             {/*{aberta? "Sim" : "Não"}*/}
             {/*{aberta && "Pergunta aberta"}*/}
