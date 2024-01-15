@@ -2,16 +2,18 @@
 import { useState } from "react"
 import If from "./If"
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react"
+//import IfElse from "./IfElse"
 
 interface PerguntaProps {
+    id: number
     texto: string
-    alternativas: string
+    //alternativas: string
     resposta: string
+    aberta: boolean
+    alternarVisibilidade: (id: number) => void
 }
 
 export default function Pergunta(props: PerguntaProps){
-    const [aberta, setAberta] = useState<boolean>(false)
-
     return (
         <div className={`
             border border-white rounded-md
@@ -19,14 +21,18 @@ export default function Pergunta(props: PerguntaProps){
         `}>
             <div 
                 className="bg-zinc-700 p-5 cursor-pointer select-none flex justify-between"
-                onClick={() => setAberta(!aberta)}
+                onClick={() => props.alternarVisibilidade(props.id)}
             >
                 <span>
                     {props.texto}
-                    {props.alternativas}
+                    {/* {props.alternativas} */}
                 </span>
-                {aberta? <IconChevronUp /> : <IconChevronDown />}
-                
+                {props.aberta? <IconChevronUp /> : <IconChevronDown />}
+                {/* Outra forma que também funciona!!!
+                <IfElse teste={aberta}>
+                    <IconChevronUp />
+                    <IconChevronDown />
+                </IfElse> */}
                 
             </div>
             {/*{aberta? "Sim" : "Não"}*/}
@@ -37,7 +43,7 @@ export default function Pergunta(props: PerguntaProps){
                 </div>
             )}*/}
 
-            <If teste={aberta}>
+            <If teste={props.aberta}>
                 <div className="bg-green-600 p-5">
                     {props.resposta}
                 </div>
