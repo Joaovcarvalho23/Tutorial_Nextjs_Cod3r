@@ -9,5 +9,5 @@
 - V [React] componente com estado
 - V [React] comunicação entre componentes (direta)
 - V [React] comunicação entre componentes (indireta)
-- X [React] renderização condicional
+- V [React] renderização condicional
 - X [React] renderização de listas
